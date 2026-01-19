@@ -8,25 +8,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0;
             background: #f5f7fa;
             color: #1f2933;
+            line-height: 1.6;
         }
 
+        /* HERO */
         .hero {
             min-height: 100vh;
             background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
             url("https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&w=1920&q=80");
             background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
+            padding: 40px;
         }
 
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; opacity: .95; }
+
+        /* LAYOUT */
         .container {
             max-width: 1100px;
             margin: auto;
@@ -35,9 +44,14 @@
 
         h2 {
             text-align: center;
+            font-size: 2rem;
             margin-bottom: 30px;
+            color: #0f172a;
         }
 
+        .section { margin-bottom: 60px; }
+
+        /* CARDS */
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -51,12 +65,25 @@
             box-shadow: 0 10px 25px rgba(0,0,0,.08);
         }
 
-        .price { color: #14532d; font-weight: 600; }
+        .card h3 {
+            margin-bottom: 15px;
+            color: #14532d;
+        }
 
+        .card ul { list-style: none; }
+        .card li { margin-bottom: 10px; }
+
+        .price {
+            font-weight: 600;
+            color: #14532d;
+        }
+
+        /* TABLE */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
+            font-size: 0.9rem;
         }
 
         th, td {
@@ -71,6 +98,19 @@
 
         tr:nth-child(even) { background: #f0fdf4; }
 
+        /* TOTAL */
+        .total {
+            background: #14532d;
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .total h3 { font-size: 1.8rem; }
+        .total p { font-size: 1.2rem; margin-top: 10px; }
+
+        /* BUTTON */
         .btn {
             display: inline-block;
             margin-top: 20px;
@@ -84,49 +124,117 @@
 
         .btn:hover { background: #166534; }
 
+        /* FOOTER */
         footer {
             background: #0f172a;
             color: #cbd5e1;
             text-align: center;
             padding: 25px;
+            font-size: 0.9rem;
         }
+
+        a { color: #166534; text-decoration: none; font-weight: 500; }
     </style>
 </head>
 <body>
 
+<!-- HERO -->
 <section class="hero">
     <div>
         <h1>Vilamoura Golf Trip 2026</h1>
-        <p>9–13 April · Portugal</p>
+        <p>9–13 April 2026 · Portugal</p>
     </div>
 </section>
 
 <main class="container">
 
-<h2>Golf Schedule</h2>
+<!-- PRE-TRAVEL -->
+<section class="section">
+<h2>Pre-Travel Costs</h2>
 
 <div class="cards">
-    <div class="card">
-        <p>Total Golf Package: <span class="price">€526</span></p>
 
-        <table>
-            <tr>
-                <th>Date</th><th>Course</th><th>Holes</th><th>Time</th><th>Price</th>
-            </tr>
-            <tr><td>09 Apr</td><td>Millennium</td><td>Twilight</td><td>15:30</td><td>€103</td></tr>
-            <tr><td>10 Apr</td><td>Laguna</td><td>18</td><td>10:10</td><td>€141</td></tr>
-            <tr><td>11 Apr</td><td>Pinhal</td><td>18</td><td>14:30</td><td>€141</td></tr>
-            <tr><td>12 Apr</td><td>Millennium</td><td>18</td><td>14:00</td><td>€141</td></tr>
-        </table>
-
-        <a class="btn" href="details.html">View Full Booking Details (PDF)</a>
-    </div>
+<div class="card">
+<h3>Accommodation & Transfers</h3>
+<ul>
+<li>Sharing Room: <span class="price">€250</span></li>
+<li>Single Room: <span class="price">€450</span></li>
+<li>Breakfast Included</li>
+<li>Golf Course Transfers</li>
+<li>
+Hotel:
+<a href="https://portobelo.dompedro.com/en/" target="_blank">
+Dom Pedro Portobelo
+</a>
+</li>
+</ul>
 </div>
+
+<div class="card">
+<h3>Golf Schedule</h3>
+<p>Total Package: <span class="price">€526 per person</span></p>
+
+<table>
+<tr>
+<th>Date</th><th>Course</th><th>Holes</th><th>Time</th><th>Price</th>
+</tr>
+<tr><td>09 Apr</td><td>Millennium</td><td>Twilight</td><td>15:30</td><td>€103</td></tr>
+<tr><td>10 Apr</td><td>Laguna</td><td>18</td><td>10:10</td><td>€141</td></tr>
+<tr><td>11 Apr</td><td>Pinhal</td><td>18</td><td>14:30</td><td>€141</td></tr>
+<tr><td>12 Apr</td><td>Millennium</td><td>18</td><td>14:00</td><td>€141</td></tr>
+</table>
+
+<p style="font-size:.85rem;margin-top:10px;">
+* Twilight round – 18 holes not guaranteed
+</p>
+
+<a class="btn" href="details.html">View Full Booking Details (PDF)</a>
+</div>
+
+<div class="card">
+<h3>Flights & Baggage</h3>
+<ul>
+<li><strong>Dublin → Faro</strong><br>Aer Lingus · 07:35 – 10:30</li>
+<li><strong>Faro → Dublin</strong><br>Ryanair · 09:20 – 12:15</li>
+<li>Flights + 10kg Check-in Bag: <span class="price">€287</span></li>
+<li>Flights (No Check-in Bag): <span class="price">€267</span></li>
+<li><em>Prices subject to change</em></li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- TOTAL -->
+<section class="section">
+<div class="total">
+<h3>Total Pre-Holiday Cost</h3>
+<p>€1,063 (Sharing) · €1,263 (Single)</p>
+</div>
+</section>
+
+<!-- ARRIVAL -->
+<section class="section">
+<h2>Arrival Costs</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Airport Transfers</h3>
+<p class="price">€25 per person</p>
+</div>
+
+<div class="card">
+<h3>Golf Buggies</h3>
+<p>€30 per buggy per round</p>
+<p class="price">€120 per person</p>
+</div>
+</div>
+</section>
 
 </main>
 
 <footer>
-© 2026 Vilamoura Golf Trip
+© 2026 Vilamoura Golf Trip · All details subject to change
 </footer>
 
 </body>
