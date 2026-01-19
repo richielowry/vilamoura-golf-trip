@@ -1,151 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vilamoura Golf Trip 2026</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vilamoura Golf Trip 2026</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0f172a;
-      color: #ffffff;
-    }
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #1f2933;
+        }
 
-    .hero {
-      background: linear-gradient(
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.55)
-      ),
-      url("https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=1200&q=70");
-      background-size: cover;
-      background-position: center;
-      padding: 40px 20px;
-      text-align: center;
-    }
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+            url("https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&w=1920&q=80");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
 
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
 
-    .hero p {
-      font-size: 1rem;
-      opacity: 0.9;
-    }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    .content {
-      padding: 25px 18px;
-      background: #020617;
-    }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
 
-    .section {
-      margin-bottom: 28px;
-    }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,.08);
+        }
 
-    .section h2 {
-      font-size: 1.1rem;
-      margin-bottom: 12px;
-      color: #86efac;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+        .price { color: #14532d; font-weight: 600; }
 
-    .item {
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
 
-    .price {
-      font-weight: 600;
-      color: #bbf7d0;
-    }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
 
-    .total {
-      background: #14532d;
-      padding: 18px;
-      border-radius: 12px;
-      text-align: center;
-      margin-top: 10px;
-    }
+        th {
+            background: #14532d;
+            color: white;
+        }
 
-    .total strong {
-      font-size: 1.2rem;
-    }
+        tr:nth-child(even) { background: #f0fdf4; }
 
-    a {
-      color: #86efac;
-      text-decoration: none;
-      font-weight: 600;
-    }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 22px;
+            background: #14532d;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        .btn:hover { background: #166534; }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 0.8rem;
-      color: #94a3b8;
-      background: #020617;
-    }
-  </style>
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="hero">
-    <h1>Vilamoura Golf Trip 2026</h1>
-    <p>9–13 April · Portugal</p>
-  </div>
-
-  <div class="content">
-
-    <div class="section">
-      <h2>Accommodation</h2>
-      <div class="item">Sharing: <span class="price">€250</span></div>
-      <div class="item">Single: <span class="price">€450</span></div>
-      <div class="item">Breakfast + Course Transfers</div>
-      <div class="item">
-        Hotel:
-        <a href="https://portobelo.dompedro.com/en/" target="_blank">
-          Dom Pedro Portobelo
-        </a>
-      </div>
+<section class="hero">
+    <div>
+        <h1>Vilamoura Golf Trip 2026</h1>
+        <p>9–13 April · Portugal</p>
     </div>
+</section>
 
-    <div class="section">
-      <h2>Golf</h2>
-      <div class="item price">€526</div>
+<main class="container">
+
+<h2>Golf Schedule</h2>
+
+<div class="cards">
+    <div class="card">
+        <p>Total Golf Package: <span class="price">€526</span></p>
+
+        <table>
+            <tr>
+                <th>Date</th><th>Course</th><th>Holes</th><th>Time</th><th>Price</th>
+            </tr>
+            <tr><td>09 Apr</td><td>Millennium</td><td>Twilight</td><td>15:30</td><td>€103</td></tr>
+            <tr><td>10 Apr</td><td>Laguna</td><td>18</td><td>10:10</td><td>€141</td></tr>
+            <tr><td>11 Apr</td><td>Pinhal</td><td>18</td><td>14:30</td><td>€141</td></tr>
+            <tr><td>12 Apr</td><td>Millennium</td><td>18</td><td>14:00</td><td>€141</td></tr>
+        </table>
+
+        <a class="btn" href="details.html">View Full Booking Details (PDF)</a>
     </div>
+</div>
 
-    <div class="section">
-      <h2>Flights</h2>
-      <div class="item">Flights (est): <span class="price">€287</span></div>
-      <div class="item">Golf Bag + 10kg: <span class="price">€267</span></div>
-      <div class="item"><em>Prices may vary</em></div>
-    </div>
+</main>
 
-    <div class="total">
-      <div>Total Pre-Holiday</div>
-      <strong>€1,063 (Sharing)</strong><br />
-      <strong>€1,263 (Single)</strong>
-    </div>
-
-    <div class="section" style="margin-top: 30px;">
-      <h2>Arrival Costs</h2>
-      <div class="item">Airport Transfer: <span class="price">€25</span></div>
-      <div class="item">Golf Buggies: <span class="price">€120</span></div>
-    </div>
-
-  </div>
-
-  <footer>
-    © 2026 Vilamoura Golf Trip
-  </footer>
+<footer>
+© 2026 Vilamoura Golf Trip
+</footer>
 
 </body>
 </html>
